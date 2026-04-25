@@ -1,0 +1,24 @@
+CREATE DATABASE busbooking;
+USE busbooking;
+
+CREATE TABLE buses (
+    bus_id INT PRIMARY KEY,
+    bus_name VARCHAR(50),
+    source VARCHAR(50),
+    destination VARCHAR(50),
+    seats_available INT,
+    price INT
+);
+
+CREATE TABLE bookings (
+    booking_id INT AUTO_INCREMENT PRIMARY KEY,
+    passenger_name VARCHAR(50),
+    bus_id INT,
+    seats_booked INT,
+    total_amount INT
+);
+
+INSERT INTO buses VALUES 
+(101, 'KPN Travels', 'Dharmapuri', 'Chennai', 40, 500),
+(102, 'SRS Travels', 'Dharmapuri', 'Coimbatore', 35, 350),
+(103, 'Parveen Travels', 'Salem', 'Bangalore', 30, 600);
